@@ -2,7 +2,6 @@ package day01
 
 import println
 import readInput
-import java.lang.Exception
 
 fun main() {
     fun part1(input: List<String>): Int {
