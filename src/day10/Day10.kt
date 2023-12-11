@@ -51,7 +51,9 @@ private class Area(lines: List<String>) {
         }
     }
 
-    private data class Pipe(val position: Position, val type: PType)
+    private data class Pipe(val position: Position){
+        var type: PType? = null
+    }
 
     private fun Pipe.adjacentPipes(): Map<Direction, Pipe> {
         return listOf(
@@ -77,9 +79,15 @@ private class Area(lines: List<String>) {
             line.forEachIndexed { col, c ->
                 if (c == '.') return@forEachIndexed
                 if (c == 'S') {
-                    sourcePipe = Pipe(position = Position(row = row, col = col), type = type(c))
+                    sourcePipe = Pipe(position = Position(row = row, col = col)).also {
+                        it.type = type(c)
+                    }
                 }
-                pipes.add(Pipe(position = Position(row = row, col = col), type = type(c)))
+                pipes.add(
+                    Pipe(position = Position(row = row, col = col)).also {
+                        it.type = type(c)
+                    }
+                )
             }
         }
     }
