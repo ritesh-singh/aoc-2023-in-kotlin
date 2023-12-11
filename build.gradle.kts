@@ -13,3 +13,7 @@ tasks {
         gradleVersion = "8.5"
     }
 }
+
+dependencies {
+    implementation("com.github.shiguruikai:combinatoricskt:1.6.0")
+}
