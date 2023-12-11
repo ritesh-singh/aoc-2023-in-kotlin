@@ -23,7 +23,6 @@ private class Island(val lines: List<String>) {
                     sRow = row
                     sCol = col
                 }
-
                 grid[row][col] = lines[row][col]
             }
         }
