@@ -42,7 +42,6 @@ private class Island(val lines: List<String>) {
                 visited.add(Pair(row - 1, col))
                 queue.add(Pair(row - 1, col))
             }
-
             // down
             if (row < rowSize-1 && !visited.contains(Pair(row + 1, col)) && grid[row][col] in "S|7F" && grid[row+1][col] in "|JL"){
                 visited.add(Pair(row + 1, col))
