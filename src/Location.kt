@@ -7,3 +7,7 @@ fun Position2D.up() = copy(x = x - 1)
 fun Position2D.down() = copy(x = x + 1)
 fun Position2D.left() = copy(y = y - 1)
 fun Position2D.right() = copy(y = y + 1)
+
+enum class Direction {
+    N, S, W, E
+}
