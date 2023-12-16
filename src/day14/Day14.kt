@@ -5,7 +5,7 @@ import println
 import readInput
 import kotlin.system.measureTimeMillis
 
-class Parabolic(val lines: List<String>) {
+private class Parabolic(val lines: List<String>) {
     private val grid = Array(lines.size) { CharArray(lines[0].length) }
 
     init {
