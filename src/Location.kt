@@ -8,6 +8,19 @@ fun Position2D.down() = copy(x = x + 1)
 fun Position2D.left() = copy(y = y - 1)
 fun Position2D.right() = copy(y = y + 1)
 
+fun Position2D.north() = copy(x = x - 1)
+fun Position2D.south() = copy(x = x + 1)
+fun Position2D.east() = copy(y = y + 1)
+fun Position2D.west() = copy(y = y - 1)
+
+
+/**
+ *
+ *      N
+ *   W      E
+ *      S
+ *
+ */
 enum class Direction {
     N, S, W, E
 }
