@@ -24,3 +24,7 @@ fun Position2D.west() = copy(y = y - 1)
 enum class Direction {
     N, S, W, E
 }
+
+enum class DirectionLRUP {
+    L, R, U, D
+}
