@@ -3,6 +3,12 @@ data class Position2D(
     val y: Int
 )
 
+
+data class Position2DLong(
+    val x: Long,
+    val y: Long
+)
+
 fun Position2D.up() = copy(x = x - 1)
 fun Position2D.down() = copy(x = x + 1)
 fun Position2D.left() = copy(y = y - 1)
